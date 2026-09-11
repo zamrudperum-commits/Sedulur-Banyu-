@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sedulur Banyu - Informasi, tips dan inspirasi budidaya ikan lele.">
+  <title>Sedulur Banyu | Budidaya Lele</title>
+  <style>
+    :root{
+      --blue:#168cf0;
+      --dark:#06241d;
+      --glass:rgba(255,255,255,.90);
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{
+      margin:0;font-family:Arial,Helvetica,sans-serif;color:#fff;
+      background:
+        linear-gradient(rgba(0,20,12,.42),rgba(0,20,12,.55)),
+        url("background-lele.png") center/cover fixed;
+      min-height:100vh;
+    }
+    nav{
+      position:sticky;top:0;z-index:10;padding:16px 6%;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+      background:rgba(4,29,23,.82);backdrop-filter:blur(10px);
+    }
+    .logo{font-size:26px;font-weight:800;white-space:nowrap}
+    .logo span{color:#28a0ff}
+    nav a{color:white;text-decoration:none;margin:0 9px;font-weight:700}
+    nav a:hover{color:#4eb3ff}
+    .hero{text-align:center;padding:100px 20px 70px;min-height:620px}
+    .hero .welcome{font-size:25px;font-weight:700}
+    h1{font-size:clamp(48px,9vw,92px);margin:8px 0 12px}
+    h1 span{color:#269eff}
+    .hero h2{font-size:clamp(22px,3vw,36px);margin:0 auto 16px;max-width:900px}
+    .hero p{font-size:19px;line-height:1.6;max-width:760px;margin:12px auto}
+    .btn{
+      display:inline-block;margin-top:22px;padding:15px 30px;border-radius:40px;
+      background:var(--blue);color:#fff;text-decoration:none;font-weight:800;
+      box-shadow:0 8px 25px rgba(0,0,0,.25);transition:.2s;
+    }
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .section{padding:55px 6%}
+    .section-title{text-align:center;font-size:34px;margin:0 0 28px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .card{
+      background:var(--glass);color:#17303a;padding:28px 22px;border-radius:20px;
+      text-align:center;box-shadow:0 10px 35px rgba(0,0,0,.18);
+    }
+    .icon{font-size:42px}
+    .card h3{font-size:21px;margin:12px 0 8px}
+    .card p{line-height:1.55;margin:0}
+    .about{
+      max-width:900px;margin:auto;background:rgba(4,29,23,.76);
+      padding:30px;border-radius:20px;line-height:1.7;
+    }
+    footer{
+      text-align:center;padding:28px 15px;background:rgba(4,29,23,.92);
+    }
+    #topBtn{
+      position:fixed;right:18px;bottom:18px;border:0;border-radius:50%;
+      width:46px;height:46px;background:var(--blue);color:white;font-size:20px;
+      display:none;cursor:pointer;
+    }
+    @media(max-width:850px){
+      nav{flex-direction:column;align-items:center}
+      nav a{display:inline-block;margin:4px 6px}
+      .cards{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:520px){
+      .hero{padding-top:65px}
+      .cards{grid-template-columns:1fr}
+      .hero .welcome{font-size:21px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🐟 Sedulur <span>Banyu</span></div>
+  <div>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#tips">Tips</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+</nav>
+
+<section class="hero" id="beranda">
+  <div class="welcome">Selamat Datang di</div>
+  <h1>Sedulur <span>Banyu</span></h1>
+  <h2>Informasi, Tips dan Inspirasi seputar Budidaya Ikan Lele</h2>
+  <p>Kami hadir untuk membantu Anda mendapatkan informasi dan panduan budidaya lele dengan mudah.</p>
+  <a class="btn" href="#tips">Mulai Sekarang →</a>
+</section>
+
+<section class="section" id="tips">
+  <h2 class="section-title">Yang Bisa Anda Temukan</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🐟</div>
+      <h3>Tips Budidaya</h3>
+      <p>Panduan budidaya lele dari persiapan kolam hingga panen.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📋</div>
+      <h3>Artikel & Informasi</h3>
+      <p>Informasi tentang pakan, perawatan, kualitas air dan pemeliharaan.</p>
+    </div>
+    <div class="card" id="galeri">
+      <div class="icon">🖼️</div>
+      <h3>Galeri</h3>
+      <p>Kumpulan foto kolam, ikan lele dan hasil budidaya.</p>
+    </div>
+    <div class="card" id="kontak">
+      <div class="icon">💬</div>
+      <h3>Kontak</h3>
+      <p>Hubungi kami untuk informasi dan konsultasi seputar budidaya lele.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tentang">
+  <div class="about">
+    <h2>Tentang Sedulur Banyu</h2>
+    <p>Sedulur Banyu adalah website sederhana untuk berbagi informasi, tips dan inspirasi mengenai budidaya ikan lele.</p>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Sedulur Banyu — Bersama Sedulur Banyu, Berbagi Manfaat
+</footer>
+
+<button id="topBtn" aria-label="Kembali ke atas">↑</button>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const topBtn = document.getElementById("topBtn");
+  window.addEventListener("scroll", () => {
+    topBtn.style.display = window.scrollY > 350 ? "block" : "none";
+  });
+  topBtn.addEventListener("click", () => window.scrollTo({top:0,behavior:"smooth"}));
+</script>
+
+</body>
+</html>
